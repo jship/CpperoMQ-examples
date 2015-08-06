@@ -3,6 +3,7 @@ SET(EXE_SOURCES
     hwserver.cpp
     wuclient.cpp
     wuserver.cpp
+    version.cpp
 )
 
 FOREACH(CUR_SOURCE_FILE ${EXE_SOURCES})
