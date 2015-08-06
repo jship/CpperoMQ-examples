@@ -1,6 +1,8 @@
 SET(EXE_SOURCES
     hwclient.cpp
     hwserver.cpp
+    wuclient.cpp
+    wuserver.cpp
 )
 
 FOREACH(CUR_SOURCE_FILE ${EXE_SOURCES})
