@@ -28,7 +28,7 @@ int main()
     std::cout << "Sending tasks to workers...\n" << std::endl;
 
     // The first message is "0" and signals start of batch
-    sink.send(OutgoingMessage(1, "0"));
+    sink.send(OutgoingMessage("0"));
 
     // Initialize random number generator
     std::random_device randomDevice;
@@ -50,7 +50,7 @@ int main()
         std::ostringstream ss;
         ss << workload;
 
-        sender.send(OutgoingMessage(ss.str().length(), ss.str().c_str()));
+        sender.send(OutgoingMessage(ss.str().c_str()));
     }
 
     std::cout << "Total expected cost: " << totalMsec << " msec" << std::endl;

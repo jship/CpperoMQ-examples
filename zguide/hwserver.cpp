@@ -29,7 +29,7 @@ int main()
     	std::this_thread::sleep_for(std::chrono::seconds(1));;
 
         // Send reply back to client.
-        OutgoingMessage reply(5, "World");
+        OutgoingMessage reply("World");
         socket.send(reply);
     }
 

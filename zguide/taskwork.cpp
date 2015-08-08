@@ -31,8 +31,7 @@ int main()
         IncomingMessage workloadMsg;
         receiver.receive(workloadMsg);
 
-        std::string workloadStr( static_cast<const char*>(workloadMsg.data())
-                               , workloadMsg.size() );
+        std::string workloadStr(workloadMsg.charData(), workloadMsg.size());
         
         // Show progress
 		std::cout << workloadStr << "." << std::flush;

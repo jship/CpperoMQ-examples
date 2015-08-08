@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         subscriber.receive(update);
 
         int zipCode = 0, temperature = 0, relativeHumidity = 0;
-        std::istringstream iss(static_cast<const char*>(update.data()));
+        std::istringstream iss(std::string(update.charData(), update.size()));
         iss >> zipCode >> temperature >> relativeHumidity ;
 
         totalTemp += temperature;

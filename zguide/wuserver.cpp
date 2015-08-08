@@ -32,11 +32,11 @@ int main()
         int temperature      = distTemp(mersenneTwister) - 80;
         int relativeHumidity = distHumidity(mersenneTwister) + 10;
 
-        std::stringstream ss;
+        std::ostringstream ss;
         ss << zipCode << " " << temperature << " " << relativeHumidity;
 
         // Send message to all subscribers
-        OutgoingMessage message(ss.str().length(), ss.str().c_str());
+        OutgoingMessage message(ss.str().c_str());
         publisher.send(message);
     }
 

@@ -20,7 +20,7 @@ int main()
     for (int requestNumber = 0; requestNumber != 10; ++requestNumber)
     {
         std::cout << "Sending Hello " << requestNumber << "..." << std::endl;
-        OutgoingMessage request(5, "Hello");
+        OutgoingMessage request("Hello");
         socket.send(request);
 
         IncomingMessage reply;
