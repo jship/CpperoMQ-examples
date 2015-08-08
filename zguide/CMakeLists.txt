@@ -1,6 +1,9 @@
 SET(EXE_SOURCES
     hwclient.cpp
     hwserver.cpp
+    tasksink.cpp
+    taskvent.cpp
+    taskwork.cpp
     wuclient.cpp
     wuserver.cpp
     version.cpp
