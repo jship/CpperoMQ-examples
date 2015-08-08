@@ -28,8 +28,8 @@ int main()
     while (true)
     {
         // Get values that will fool the boss
-        int zipCode     = distZipCode(mersenneTwister);
-        int temperature = distTemp(mersenneTwister) - 80;
+        int zipCode          = distZipCode(mersenneTwister);
+        int temperature      = distTemp(mersenneTwister) - 80;
         int relativeHumidity = distHumidity(mersenneTwister) + 10;
 
         std::stringstream ss;
