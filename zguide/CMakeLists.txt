@@ -2,6 +2,7 @@ SET(EXE_SOURCES
     hwclient.cpp
     hwserver.cpp
     msreader.cpp
+    mspoller.cpp
     tasksink.cpp
     taskvent.cpp
     taskwork.cpp
