@@ -3,6 +3,9 @@ SET(EXE_SOURCES
     hwserver.cpp
     msreader.cpp
     mspoller.cpp
+    rrbroker.cpp
+    rrclient.cpp
+    rrworker.cpp
     tasksink.cpp
     taskvent.cpp
     taskwork.cpp
