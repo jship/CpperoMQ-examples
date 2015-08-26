@@ -1,6 +1,7 @@
 SET(EXE_SOURCES
     hwclient.cpp
     hwserver.cpp
+    msgqueue.cpp
     msreader.cpp
     mspoller.cpp
     rrbroker.cpp
