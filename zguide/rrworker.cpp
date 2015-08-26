@@ -17,24 +17,24 @@ int main()
     Context context;
 
     // Socket to talk to clients.
-	ReplySocket responder(context.createReplySocket());
-	responder.connect("tcp://localhost:5560");
+    ReplySocket responder(context.createReplySocket());
+    responder.connect("tcp://localhost:5560");
 
-	while (true)
-	{
-		// Wait for next request from client.
+    while (true)
+    {
+        // Wait for next request from client.
         IncomingMessage requestMessage;
         responder.receive(requestMessage);
 
         std::string requestStr(requestMessage.charData(), requestMessage.size());
         std::cout << "Received request: [" << requestStr << "]" << std::endl;
-		
-		// Do some 'work'.
+        
+        // Do some 'work'.
         std::this_thread::sleep_for(seconds(1));
 
         // Send reply back to client.
         responder.send(OutgoingMessage("World"));
-	}
+    }
 
     return 0;
 }
