@@ -1,0 +1,14 @@
+SET(EXE_SOURCES
+    pubsubcontroller.cpp
+    pubsubpublisher.cpp
+    pubsubqueue.cpp
+    pubsubsubscriber.cpp
+)
+
+FOREACH(CUR_SOURCE_FILE ${EXE_SOURCES})
+    STRING(REPLACE ".cpp" "" EXE_NAME ${CUR_SOURCE_FILE})
+    ADD_EXECUTABLE(${EXE_NAME} ${CUR_SOURCE_FILE})
+    TARGET_LINK_LIBRARIES(${EXE_NAME} ${ZEROMQ_LIBRARIES})
+
+    INSTALL(TARGETS ${EXE_NAME} RUNTIME DESTINATION bin)
+ENDFOREACH()
