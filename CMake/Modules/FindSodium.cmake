@@ -41,6 +41,7 @@ SET(FIND_SODIUM_LIB_PATHS
 FIND_LIBRARY(SODIUM_LIBRARY_DEBUG
              NAMES
                  sodium
+                 libsodium
              PATH_SUFFIXES
                  lib64
                  lib
@@ -53,6 +54,7 @@ FIND_LIBRARY(SODIUM_LIBRARY_DEBUG
 FIND_LIBRARY(SODIUM_LIBRARY_RELEASE
              NAMES
                  sodium
+                 libsodium
              PATH_SUFFIXES
                  lib64
                  lib

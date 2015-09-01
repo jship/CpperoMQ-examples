@@ -39,6 +39,7 @@ SET(FIND_ZEROMQ_LIB_PATHS
 FIND_LIBRARY(ZEROMQ_LIBRARY_DEBUG
              NAMES
                  zmq
+                 libzmq
              PATH_SUFFIXES
                  lib64
                  lib
@@ -51,6 +52,7 @@ FIND_LIBRARY(ZEROMQ_LIBRARY_DEBUG
 FIND_LIBRARY(ZEROMQ_LIBRARY_RELEASE
              NAMES
                  zmq
+                 libzmq
              PATH_SUFFIXES
                  lib64
                  lib
