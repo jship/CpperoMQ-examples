@@ -40,7 +40,7 @@ SET(FIND_SODIUM_LIB_PATHS
 
 FIND_LIBRARY(SODIUM_LIBRARY_DEBUG
              NAMES
-                 libsodium
+                 sodium
              PATH_SUFFIXES
                  lib64
                  lib
@@ -52,7 +52,7 @@ FIND_LIBRARY(SODIUM_LIBRARY_DEBUG
 
 FIND_LIBRARY(SODIUM_LIBRARY_RELEASE
              NAMES
-                 libsodium
+                 sodium
              PATH_SUFFIXES
                  lib64
                  lib
@@ -64,7 +64,7 @@ FIND_LIBRARY(SODIUM_LIBRARY_RELEASE
 
 IF (SODIUM_LIBRARY_DEBUG OR SODIUM_LIBRARY_RELEASE)
     SET(SODIUM_FOUND TRUE)
-    
+
     IF (SODIUM_LIBRARY_DEBUG AND SODIUM_LIBRARY_RELEASE)
         SET(SODIUM_LIBRARY debug ${SODIUM_LIBRARY_DEBUG} optimized ${SODIUM_LIBRARY_RELEASE})
     ENDIF()

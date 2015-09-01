@@ -38,7 +38,7 @@ SET(FIND_ZEROMQ_LIB_PATHS
 
 FIND_LIBRARY(ZEROMQ_LIBRARY_DEBUG
              NAMES
-                 libzmq
+                 zmq
              PATH_SUFFIXES
                  lib64
                  lib
@@ -50,7 +50,7 @@ FIND_LIBRARY(ZEROMQ_LIBRARY_DEBUG
 
 FIND_LIBRARY(ZEROMQ_LIBRARY_RELEASE
              NAMES
-                 libzmq
+                 zmq
              PATH_SUFFIXES
                  lib64
                  lib
@@ -62,7 +62,7 @@ FIND_LIBRARY(ZEROMQ_LIBRARY_RELEASE
 
 IF (ZEROMQ_LIBRARY_DEBUG OR ZEROMQ_LIBRARY_RELEASE)
     SET(ZEROMQ_FOUND TRUE)
-    
+
     IF (ZEROMQ_LIBRARY_DEBUG AND ZEROMQ_LIBRARY_RELEASE)
         SET(ZEROMQ_LIBRARY debug ${ZEROMQ_LIBRARY_DEBUG} optimized ${ZEROMQ_LIBRARY_RELEASE})
     ENDIF()
