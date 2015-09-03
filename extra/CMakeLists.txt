@@ -1,4 +1,6 @@
 SET(EXE_SOURCES
+    multipartpublisher.cpp
+    multipartsubscriber.cpp
     pubsubcontroller.cpp
     pubsubpublisher.cpp
     pubsubqueue.cpp
