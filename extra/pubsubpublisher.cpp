@@ -3,7 +3,6 @@
 #include <CpperoMQ/All.hpp>
 
 #include <iostream>
-#include <string>
 #include <thread>
 
 int main()
@@ -14,11 +13,11 @@ int main()
 
     PublishSocket publisher(context.createPublishSocket());
     publisher.connect("tcp://localhost:5559");
-    
+
     // Allow time for ZMQ to establish a connection. Don't do this in
     // real software!
     std::this_thread::sleep_for(std::chrono::seconds(1));
-    
+
     for (int i = 0; i < 10; ++i)
     {
         std::cout << "Sending message " << i << std::endl;
