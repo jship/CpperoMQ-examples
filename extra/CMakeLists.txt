@@ -6,7 +6,11 @@ SET(EXE_SOURCES
     pubsubqueue.cpp
     pubsubsubscriber.cpp
     sendrecvpublisher.cpp
+    sendrecvpublisher2.cpp
+    sendrecvpublisher3.cpp
     sendrecvsubscriber.cpp
+    sendrecvsubscriber2.cpp
+    sendrecvsubscriber3.cpp
 )
 
 SET(CXX_FEATURES
